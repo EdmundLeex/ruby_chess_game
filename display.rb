@@ -11,15 +11,6 @@ class Display
     @selected_pos = nil
   end
 
-  def print_out
-    while true
-      print_board
-      new_pos = HumanPlayer.get_key(@cursor_pos)
-      break unless new_pos
-      @cursor_pos = new_pos if board.on_board?(new_pos)
-    end
-  end
-
   def update_cursor(new_pos)
     @cursor_pos = new_pos
   end
@@ -27,17 +18,28 @@ class Display
   def print_board(selected_pos = nil)
     print_str = ''
 
-    highlight_center = selected_pos || @cursor_pos
-    @valid_moves = board.valid_moves(board[highlight_center].color, highlight_center)
-    system 'clear'
-    board.grid.each_with_index do |row, row_i|
-      print_str << print_row(row, row_i, highlight_center)
+    if selected_pos
+      highlight_center = selected_pos
+      @valid_moves = board.valid_moves(board[highlight_center].color, highlight_center)
+      
+      board.grid.each_with_index do |row, row_i|
+        print_str << print_row(row, row_i, highlight_center)
+      end
+    else
+      highlight_center = @cursor_pos
+
+      board.grid.each_with_index do |row, row_i|
+        @valid_moves = []
+        print_str << print_row(row, row_i, highlight_center)
+      end
     end
+
+    system 'clear'
     print print_str
     true
   end
 
-  def print_row(row, row_i, selected_pos)
+  def print_row(row, row_i, selected_pos = nil)
     print_str = ''
 
     row.each_with_index do |el, cell_i|

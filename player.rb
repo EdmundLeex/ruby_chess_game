@@ -23,9 +23,8 @@ class HumanPlayer
   end
 
   def self.get_key(cursor_pos)
-    c = read_char
     new_pos = cursor_pos.dup
-    case c
+    case read_char
     when "\e[A"
       # "UP ARROW"
       new_pos[0] -= 1
