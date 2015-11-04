@@ -1,8 +1,3 @@
-require 'byebug'
-require './board'
-require './player'
-require './display'
-
 class Chess
   attr_reader :board, :display, :players
 
@@ -72,24 +67,4 @@ class Chess
   def inspect
     true
   end
-end
-
-if $PROGRAM_NAME == __FILE__
-  # board = Board.new(false)
-  board = Board.new
-  player1 = HumanPlayer.new(:red)
-  player2 = HumanPlayer.new(:black)
-  players = [player1, player2]
-  #debugger
-  game = Chess.new(players, board)
-
-  # pawn = Pawn.new(:black, [4, 6], board)
-  # queen = Queen.new(:black, [5,6], board)
-  # #bishop = Bishop.new(:black, [0, 1], board)
-  # rook = Rook.new(:black, [0, 0], board)
-  # king = King.new(:red, [1, 1], board)
-  # knight = Knight.new(:white, [6, 6], board)
-  # black_king = King.new(:black, [7, 7], board)
-
-  game.play
 end

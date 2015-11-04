@@ -1,4 +1,4 @@
-require 'io/console'
+# require 'io/console'
 
 # Reads keypresses from the user including 2 and 3 escape character sequences.
 def read_char

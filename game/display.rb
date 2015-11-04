@@ -1,7 +1,3 @@
-require 'colorize'
-require 'io/console'
-require './player.rb'
-
 class Display
   attr_reader :board, :cursor_pos
 
