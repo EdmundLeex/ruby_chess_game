@@ -15,6 +15,8 @@ Class chess game built with Ruby.
 ## Screen Shots
 ![one]
 ![two]
+![three]
 
 [one]: ./screenshots/1.png
 [two]: ./screenshots/2.png
+[three]: ./screenshots/3.png
