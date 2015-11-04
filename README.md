@@ -20,3 +20,9 @@ Class chess game built with Ruby.
 [one]: ./screenshots/1.png
 [two]: ./screenshots/2.png
 [three]: ./screenshots/3.png
+
+## Todos
+- Castling logic
+- Pawn promotion logic
+- API (check out this repo if you would like to work on this terminal game API
+https://github.com/AA-Chess-API/AA-Chess-API)
