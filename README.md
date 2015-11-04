@@ -5,6 +5,7 @@ Class chess game built with Ruby.
 - Clone this repo to your local machine
 - Navigate to the directory
 - Run `ruby play_chess.rb`
+- Esc to quit the game
 
 ## Features
 - Players alternating validation
