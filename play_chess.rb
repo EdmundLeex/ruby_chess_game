@@ -1,9 +1,9 @@
 require 'colorize'
 require 'io/console'
-require_relative './board'
-require_relative './player'
-require_relative './display'
-require_relative './chess'
+require_relative './game/board'
+require_relative './game/player'
+require_relative './game/display'
+require_relative './game/chess'
 
 
 if $PROGRAM_NAME == __FILE__
